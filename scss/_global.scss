@@ -1,15 +1,15 @@
 // selected projects section started
 
-#selected_projects{
+#selected__projects{
     margin-top: 40px;
-    height: 120rem;
+    height: 135rem;
     width: 100%;
     @include breakpoint-down(small){
         height: 126rem;
         width: 22.5rem;
         margin-top: 50px;
     }
-    .projects_content{
+    .projects__content{
         padding: 50px;
         @include breakpoint-down(small){
             padding: 30px 15px 0px 15px;
@@ -37,94 +37,94 @@
             margin-top: 2px;
         }
     }
-    .projects_container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 1fr 1fr;
+    .projects__container{
         padding-top: 110px;
         width: 100%;
-        gap: 40px;
-        height: 125rem;
+        height: 115rem; 
         @include breakpoint-down(small){
-            padding: 50px 0px 30px 0px;
-            grid-template-columns: 1fr;
-            grid-auto-rows: repeat(4, 1fr);
-            gap: 20px;
+                   padding: 0px;
         }
-    .box_container1{
-        position: relative;
-        // @include breakpoint-down(small){
-        //     // margin-top: -30px;
-        //     // padding: 0px;
-        // }
-        // position: relative;
-        background-image: url(../content/basicux-01.jpg);
-        background-size: cover;
-        background-position: center center;
-        transition: background .4s;
-        background-repeat: no-repeat;
-        
-        .box_text{
-            width: 300px;
-            height: 250px;
+        @include breakpoint-down(medium){
+            padding: 0px;
+        }
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 1fr 1fr;
+            gap: 40px;
             @include breakpoint-down(small){
-                padding: 20px 30px;
+                grid-template-columns: 1fr;
+                grid-auto-rows: repeat(4, 1fr);
+                gap: 20px;
             }
-            p:nth-child(1){
-                color: rgb(202, 190, 190);
-                font-size: 16px;
-                font-weight: 500;
-                font-family: sans-serif;
+            .box__container1{
+                position: relative;
+                background-image: url(../content/basicux-01.jpg);
+                background-size: cover;
+                background-position: center center;
+                transition: background .4s;
+                background-repeat: no-repeat;
+        
+            .box__text{
+                width: 300px;
+                height: 250px;
                 @include breakpoint-down(small){
-                    font-size: 12px;
+                    padding: 20px 30px;
                 }
-            }
-            & p:nth-child(2){
-                color: #fff;
-                font-size: 35px;
-                width: 330px;
-                padding-top: 25px;
-                @include breakpoint-down(small){
-                    font-size: 30px;
-                    width: 300px;
-                }
-            }
-        }
-        .hover_button{
-            // position: absolute;
-            // top: 38%;
-            // left: 15%;
-            color: #fff;
-            visibility: hidden;
-            margin-top: 15px;
-            font-size: 17px;
-            font-weight: 500;
-            opacity: 0;
-        }
-        &:hover{
-            cursor: pointer;
-            background: url(../content/basicux-01.jpg) center center rgba(1, 8, 31, 0.765);
-            background-position: center center;
-            background-size: cover;
-            background-blend-mode: multiply;
-            // transition: transform ease-in-out .4s ;
-            // transform: scale(1.1);
-
-            .hover_button{
-                visibility: visible;
-                animation: box__content .3s ease-in $lar__del forwards;
-            }
-            .box_text{
-                & p:nth-child(1){
-                    animation: box__content .3s ease-in $sm__del forwards;
+                p:nth-child(1){
+                    color: rgb(202, 190, 190);
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: sans-serif;
+                    @include breakpoint-down(small){
+                        font-size: 12px;
+                    }
                 }
                 & p:nth-child(2){
-                    animation: box__content .3s ease-in $med__del forwards;
+                    color: #fff;
+                    font-size: 35px;
+                    width: 330px;
+                    padding-top: 25px;
+                    @include breakpoint-down(small){
+                        font-size: 30px;
+                        width: 300px;
+                    }
                 }
-            }       
-        }   
-}
-    .box_container2{
+            }
+            .hover__button{
+                // position: absolute;
+                // top: 38%;
+                // left: 15%;
+                color: #fff;
+                visibility: hidden;
+                margin-top: 15px;
+                font-size: 17px;
+                font-weight: 500;
+                opacity: 0;
+            }
+            &:hover{
+                cursor: pointer;
+                background: url(../content/basicux-01.jpg) center center rgba(1, 8, 31, 0.765);
+                background-position: center center;
+                background-size: cover;
+                background-blend-mode: multiply;
+                // transition: transform ease-in-out .4s ;
+                // transform: scale(1.1);
+
+                .hover__button{
+                    visibility: visible;
+                    animation: box__content .3s ease-in $lar__del forwards;
+                }
+                .box__text{
+                    & p:nth-child(1){
+                        animation: box__content .3s ease-in $sm__del forwards;
+                    }
+                    & p:nth-child(2){
+                        animation: box__content .3s ease-in $med__del forwards;
+                    }
+                }       
+            }   
+    }
+    .box__container2{
         // position: relative;
         // @include breakpoint-down(small){
         //     width: 100%;
@@ -136,7 +136,7 @@
         background-position: center right;
         background-repeat: no-repeat;
         transition: background .4s;            
-        .hover_button{
+        .hover__button{
             // position: absolute;
             // top: 38%;
             // left: 15%;
@@ -155,11 +155,11 @@
             background-blend-mode: multiply;
             // transition: transform ease-in-out .4s ;
             // transform: scale(1.1);
-            .hover_button{
+            .hover__button{
                 visibility: visible;
                 animation: box__content .3s ease-in $lar__del forwards;
             }
-            .box_text{
+            .box__text{
                 & p:nth-child(1){
                     animation: box__content .3s ease-in $sm__del forwards;
                 }
@@ -168,7 +168,7 @@
                 }
             }
         }
-    .box_text{
+    .box__text{
         padding: 50px;
         @include breakpoint-down(small){
             padding: 20px 30px;
@@ -194,7 +194,7 @@
         }    
     }            
     }
-    .box_container3{
+    .box__container3{
         position: relative;       
         // @include breakpoint-down(small){
         //     width: 100%;
@@ -206,7 +206,7 @@
             background-position: center left;
             background-repeat: no-repeat;
             transition: background .4s;
-            .hover_button{
+            .hover__button{
                 color: #fff;
                 visibility: hidden;
                 margin-top: 15px;
@@ -222,11 +222,11 @@
                 background-position: center left;
                 // transition: transform ease-in-out .4s ;
                 // transform: scale(1.1);
-                .hover_button{
+                .hover__button{
                     visibility: visible;
                     animation: box__content .3s ease-in $lar__del forwards;
                 }
-                .box_text{
+                .box__text{
                     & p:nth-child(1){
                         animation: box__content .3s ease-in $sm__del forwards;
                     }
@@ -236,7 +236,7 @@
                 }
             }
     }
-        .box_text{
+        .box__text{
            padding: 50px;
            @include breakpoint-down(small){
             padding: 20px 30px;
@@ -263,8 +263,8 @@
             }    
         }
                 
-    }
-    .box_container4{
+    // }
+    .box__container4{
         position: relative; 
         // @include breakpoint-down(small){
         //     width: 100%;
@@ -274,7 +274,7 @@
         background-position: center center;
         background-size: cover;
         transition: background .4s;
-        .hover_button{
+        .hover__button{
             color: #fff;
             visibility: hidden;
             margin-top: 15px;
@@ -290,11 +290,11 @@
             background-position: bottom center; 
             // transition: transform ease-in-out .4s ;
             // transform: scale(1.1);        
-            .hover_button{
+            .hover__button{
                 visibility: visible;
                 animation: box__content .3s ease-in $lar__del forwards;
             }
-            .box_text{
+            .box__text{
                 
                 & p:nth-child(1){
                     animation: box__content .3s ease-in $sm__del forwards;
@@ -305,7 +305,7 @@
             }
         }
     }
-        .box_text{
+        .box__text{
             padding: 50px;
             @include breakpoint-down(small){
                 padding: 20px 30px;
@@ -331,6 +331,7 @@
                 }
             }    
         }
+    }
                 
     }
 
