@@ -21,8 +21,7 @@ $long__del: 120ms;
 $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
 
 // 639px, 1023px, 1399px
-$breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
-
+$breakpoints-down: ("small": "39.9975em", "medium": "63.994em", "large": "87.497em");
 @mixin breakpoint-up($size){
   @media (min-width: map-get($breakpoints-up, $size)){
     @content;
@@ -56,6 +55,7 @@ $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.43
 @mixin link__hover {
         cursor: pointer;
         color: $secondaryColor;
+        transition: all 0.4s ease-out;
 }
 @mixin flex ($justify){
         display: flex;
