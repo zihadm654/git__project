@@ -1,0 +1,71 @@
+$primaryFont: poppins , sans-serif;
+$secondaryFont: 'Ubuntu', sans-serif;
+//font size
+$d__p__size: 75px;
+// $d__m__size: 
+
+//font color
+$primaryColor: #0f141e;
+$secondaryColor: #58a6ff;
+$pickupColor: #878a8f;
+// animation delay
+$sm__del: 50ms;
+$med__del: 80ms;
+$lar__del: 100ms;
+$long__del: 120ms;
+@media (min-width: 64em){
+  // styles go here
+}
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+// 639px, 1023px, 1399px
+$breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
+
+@mixin breakpoint-up($size){
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size){
+  @media (max-width: map-get($breakpoints-down, $size)){
+    @content;
+  }
+}
+@keyframes content {
+  0% {transform: translateY(100px);
+      opacity: .1;    
+  }
+  100% {transform: translateY(0px);}
+}
+@keyframes box__content {
+  0% {transform: translateY(30px);
+      opacity: 0;    
+  }
+  10% {
+    opacity: 10%;
+  }
+  50% {
+    opacity: 40%;
+  }
+  100% {transform: translateY(0px);
+        opacity: 1;}
+}
+@mixin link__hover {
+        cursor: pointer;
+        color: $secondaryColor;
+}
+@mixin flex ($justify){
+        display: flex;
+        align-items: center;
+        justify-content: $justify;
+}
+@mixin a_link {
+        text-decoration: none; 
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+}
+
