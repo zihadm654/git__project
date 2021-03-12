@@ -21,7 +21,7 @@
             padding: 15px;
         }
         @include breakpoint-down(medium){
-            padding: 0 15px;
+            padding: 0 20px;
         }
         .logo_container{
             @include flex(center);
@@ -150,7 +150,7 @@
             padding: 15px;
         }
         @include breakpoint-down(medium){
-            padding: 25px 15px;
+            padding: 45px 20px;
         }
         .hero_text{ 
             width: 68%;

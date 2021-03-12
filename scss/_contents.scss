@@ -3,15 +3,18 @@
     width: 100%;
     @include breakpoint-down(small){
         height: 75rem;
-        width: 22.5rem;
+    }
+    @include breakpoint-down(medium){
+        height: 65rem;
     }
         .project_content{
             padding: 50px;
             @include breakpoint-down(small){
-                // height: 50rem;
-                // width: 22.5rem;
                 padding: 20px 15px;
             }
+            @include breakpoint-down(medium){
+                padding: 40px 20px;
+            }        
             & p:nth-child(1){
                 text-transform: uppercase;
                 font-size: 14px;
@@ -39,22 +42,22 @@
         }
         .project_container{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            // grid-auto-rows: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             padding: 50px 50px;
-            width: 100%;
             height: 50.625rem;
             gap: 40px;
-            // position: relative;
+            position: relative;
             
             @include breakpoint-down(small){
                 height: 63rem;
                 gap: 20px;
-                grid-template-columns: 1fr;
-                grid-auto-rows: 1fr 1fr ;
                 padding: 20px 15px;
             }
-            
+            @include breakpoint-down(medium){
+                padding: 30px 20px;
+                height: 45rem;
+                gap: 20px;
+            }        
             .box_container1{
                 position: relative;
                 background-image: url(../content/triniso-01.jpg);
@@ -190,17 +193,20 @@
     height: 65rem;
     width: 100%;
     @include breakpoint-down(small){
-        width: 22.5rem;
+        // width: 22.5rem;
         height: 75rem;
     }
     @include breakpoint-down(medium){
-        height: 68rem;
+        height: 50rem;
     }
         .project_content{
             padding: 60px 50px 90px 50px;
             @include breakpoint-down(small){
                padding: 30px 15px;
             }
+            @include breakpoint-down(medium){
+                padding: 50px 20px;
+            }        
             & p:nth-child(1){
                 text-transform: uppercase;
                 font-size: 14px;
@@ -227,28 +233,27 @@
         }
         .project_container{
             display: grid;
-            grid-template-columns: repeat(3 ,1fr);
-            gap: 45px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             height: 30rem;
             padding: 0 50px;
             @include breakpoint-down(small){
                 grid-template-columns: 1fr;
-                // grid-auto-rows: 1fr 1fr 1fr;
                 gap: 20px;
-                // height: 58rem;
-                // padding: 40px 15px;
             }
             @include breakpoint-down(medium){
-                height: 32rem;
+                height: 28rem;
                 gap: 20px;
+                padding: 20px;
             }
 
             .box1{
                 background: url(../content/triniso-01.jpg);
                 background-size: cover;
                 background-position: center right;
-                // @include flex(center);
+                @include flex(center);
                 .text{
+                    padding: 0px 80px;
                     i{
                         font-size: 30px;
                         margin-bottom: 26px;
@@ -256,12 +261,14 @@
                     color: #fff;
                     font-size: 18px;
                     text-align: center;
-                    padding: 120px 65px ;
                     opacity: 0;
                     visibility: hidden;
-                    // margin-bottom: 30px;
+                    @include breakpoint-down(medium){
+                        display: none;
+                    }
                 }
                 &:hover{
+                   
                     cursor: pointer;
                     background: url(../content/triniso-01.jpg) rgba(0, 10, 29, 0.911);
                     background-position: center right;
@@ -272,6 +279,7 @@
                             animation: box__content .2s $sm__del ease-in forwards;
                         }
                         visibility: visible;
+                        
                         animation: box__content .3s ease-in $med__del forwards;
                     }
                         
@@ -282,17 +290,21 @@
                 background: url(../content/pmr-01.jpg) center, 50% 50% ;
                 background-size: cover;
                 background-position: center left;
-                // @include flex(center);
+                @include flex(center);
                 .text{
+                    padding: 0px 80px;
                     i{
                         font-size: 30px;
                         margin-bottom: 26px;
                     }
                     color: #fff;
                     font-size: 18px;
-                    padding: 120px 65px ;
+                    // padding: 120px 65px ;
                     text-align: center;
                     visibility: hidden;
+                    @include breakpoint-down(medium){
+                        display: none;
+                    }
                 }
                 &:hover{
                     cursor: pointer;
@@ -311,8 +323,9 @@
             .box3{
                 background: url(../content/symova-01.jpg) center left;
                 background-size: cover;
-                // @include flex(center);
+                @include flex(center);
                 .text{
+                    padding: 0px 80px;
                     i{
                         font-size: 30px;
                         margin-bottom: 26px;
@@ -320,8 +333,11 @@
                     color: #fff;
                     font-size: 18px;
                     text-align: center;
-                    padding: 120px 65px ;
+                    // padding: 120px 65px;
                     visibility: hidden;
+                    @include breakpoint-down(medium){
+                        display: none;
+                    }
                 }
                 &:hover{
                     cursor: pointer;
@@ -340,17 +356,18 @@
             }
         }
         .collaborate{
-            // @include flex(center);
-            // height: auto;
-            padding: 120px 50px 80px 50px;
+           padding: 120px 50px 80px 50px;
             @include breakpoint-down(small){
-                width: 22.5rem;
                 height: 10rem;
             }
+            @include breakpoint-down(medium){
+                padding: 70px 20px
+            }
             .content{
-                @include flex(center);
-                flex-direction: column;
                 text-align: center;
+                @include breakpoint-down(medium){
+                    text-align: start;
+                }
                 & p:nth-child(1){
                     font-size: 1rem;
                     font-family: $primaryFont;
@@ -366,33 +383,37 @@
                     @include breakpoint-down(small){
                         font-size: 2rem;
                     }
+                    @include breakpoint-down(medium){
+                        font-size: 3rem;
+                    }
                     &:hover{
                         // @include hover;
                         cursor: pointer;
                         position: relative;
-                        
-                    &::after{
+                        transition: all 0.3s ease-in-out;
+                        &::after{
+                            @include breakpoint-down(medium){
+                                display: none;
+                            }    
+
                             content: '';
                             position: absolute;
                             bottom:  -10px;
                             margin: 15px 40px 0 0px;
                             left: 5px;
                             height: 0.45rem;
-                            width: 740px;
-                            background: $secondaryColor;
-                            transition: background 0.3s ease-in-out;
-                            
+                            width: 100%;
+                            background: $secondaryColor;                            
                         }    
+                    }    
+                }    
                         
-                    } 
-                    i{
-                        font-size: 50px;
-                    }
+            } 
+                i{
+                    font-size: 50px;
                 }
-            }
         }
 }
-
 
 // contact section start here...
 #contact{
@@ -400,8 +421,10 @@
     height: 30rem;
     width: 100%;
     @include breakpoint-down(small){
-        width: 22.5rem;
         height: 60rem;
+    }
+    @include breakpoint-down(medium){
+        // height: 32rem;
     }
     .contact_border{
         margin: 85px 50px;
@@ -409,6 +432,9 @@
         @include breakpoint-down(small){
             margin: 60px 15px 30px 15px;
         }
+        @include breakpoint-down(medium){
+            margin: 60px 30px;
+        }   
     }
     .contact_content{
         position: relative;
@@ -417,9 +443,12 @@
         gap: 40px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         @include breakpoint-down(small){
-            grid-template-columns: 1fr;
-            grid-auto-rows: 1fr 1fr 1fr;
             padding: 0 15px;
+        }
+        @include breakpoint-down(medium){
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
         }
         > a{
             color: black;
@@ -427,8 +456,7 @@
 
 
         .contact_info{
-            grid-area: 1 / 1 /3 / 3;
-            // height: 20rem;
+            grid-area: 1/1/3/3;
             p:nth-child(1){
                 i{
                     font-size: 100px;
@@ -436,14 +464,22 @@
                 font-size: 1.5rem;
                 font-family: $primaryFont;
                 font-weight: 700;
+                @include breakpoint-down(medium){
+                    font-size: 18px;
+                }
             }
             p:nth-child(2){
                 margin-top: 0.62rem;
                 font-family: sans-serif;
                 font-weight: 500;
-                width: 325px;
+                width: 300px;
                 font-size: 1rem;
                 color: $pickupColor;
+                @include breakpoint-down(medium){
+                    font-size: 15px;
+                    // line-height: 10px;
+                    width: 100%;
+                }
             }
             p:nth-child(3){
                 margin-top: 1.2rem;
@@ -464,9 +500,6 @@
             grid-area: 1 / 3 / 3 / 3;
             p:nth-child(1){
                 font-size: 1.5rem;
-                // color: red;
-                // width: 14rem;
-                // line-height: 30px;
                 font-weight: 700;
                 font-family: $primaryFont;
             }
@@ -541,7 +574,9 @@
         // margin-top: 42px;
         @include flex(center);
         opacity: 40%;
-        // width: 100%;
+        @include breakpoint-down(medium){
+            left: 20px;
+        }
 
         > img{
             height: 50px;
