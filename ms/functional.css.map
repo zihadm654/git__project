@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAmCA,UAAU,CAAV,OAAU;EACR,EAAE;IAAE,SAAS,EAAE,iBAAiB;IAC5B,OAAO,EAAE,EAAE;;EAEf,IAAI;IAAE,SAAS,EAAE,eAAe;;;;AAElC,UAAU,CAAV,YAAU;EACR,EAAE;IAAE,SAAS,EAAE,gBAAgB;IAC3B,OAAO,EAAE,CAAC;;EAEd,GAAG;IACD,OAAO,EAAE,GAAG;;EAEd,GAAG;IACD,OAAO,EAAE,GAAG;;EAEd,IAAI;IAAE,SAAS,EAAE,eAAe;IAC1B,OAAO,EAAE,CAAC",
+    "sources": [
+        "../git__project-master/scss/functional.scss"
+    ],
+    "names": [],
+    "file": "functional.css"
+}
